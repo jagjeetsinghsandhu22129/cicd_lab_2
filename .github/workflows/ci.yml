@@ -32,14 +32,14 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Build Docker image
-        run: docker build -t jaggi22129/nodeapp:latest .
+    - name: Build Docker image
+      run: docker build -t jaggi22129/nodeapp:latest .
 
-      - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
-      - name: Push Docker image to Docker Hub
+    - name: Push Docker image to Docker Hub
       run: docker push jaggi22129/nodeapp:latest
