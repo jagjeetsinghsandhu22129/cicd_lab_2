@@ -22,23 +22,23 @@ pipeline {
         }
           stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo 'Building the application..........'
                 // Add any build commands here
             }
         }
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo 'Running tests.........'
                 // Add test commands or scripts here
             }
         }
     }
     post {
         success {
-            echo 'Build and tests succeeded!'
+            echo 'Build and tests succeeded!!!!!!!!'
         }
         failure {
-            echo 'Build or tests failed.'
+            echo 'Build or tests failed........'
         }
     }
 }
