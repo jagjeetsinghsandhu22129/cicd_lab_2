@@ -16,7 +16,7 @@ pipeline {
                     url: '
                   https://github.com/jagjeetsinghsandhu22129/cicd_lab_2.git'
 ,
-                    credentialsId: 'GitHub_PAT'
+                    credentialsId: 'JJ'
                 )
             }
         }
