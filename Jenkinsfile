@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        NODE_VERSION = '16'  // Specify Node.js version
-        IMAGE_NAME = 'jaggi/cicd_lab_2'  // Docker image name
-    }
     triggers {
         pollSCM('H/5 * * * *') // Poll every 5 minutes for changes
     }
