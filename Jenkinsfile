@@ -9,14 +9,12 @@ pipeline {
                 // Cloning the GitHub repository with credentials
                 git(
                     branch: 'main',
-                    url: '
-                  https://github.com/jagjeetsinghsandhu22129/cicd_lab_2.git'
-,
+                    url: 'https://github.com/jagjeetsinghsandhu22129/cicd_lab_2.git',
                     credentialsId: 'JJ'
                 )
             }
         }
-          stage('Build') {
+        stage('Build') {
             steps {
                 echo 'Building the application..........'
                 // Add any build commands here
